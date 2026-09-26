@@ -18,4 +18,5 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
+    # Relaciones de 1 a N con Loan
     loans = relationship("Loan", back_populates="user")
